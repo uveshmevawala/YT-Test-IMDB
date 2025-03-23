@@ -78,9 +78,9 @@ def main():
         test_size = params['data_ingestion']['test_size']
         # test_size = 0.2
         
-        df = load_data(data_url=r"C:\Users\admin\Downloads\data.csv")
-        # s3 = s3_connection.s3_operations("imdb-bucket-aum", "AKIAZAPEBVME5DQBKD5O", "sHbi7FumLUgiIkUWjX1NKgXmHKI/qltF/mrE0DB/")
-        # df = s3.fetch_file_from_s3("data.csv")
+        # df = load_data(data_url=r"C:\Users\admin\Downloads\data.csv")
+        s3 = s3_connection.s3_operations("imdb-bucket-aum", "AKIAZAPEBVME5DQBKD5O", "sHbi7FumLUgiIkUWjX1NKgXmHKI/qltF/mrE0DB/")
+        df = s3.fetch_file_from_s3("data.csv")
 
 
 
