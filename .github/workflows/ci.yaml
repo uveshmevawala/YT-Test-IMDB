@@ -35,5 +35,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: run pipeline
+        env:
+          CAPSTONE_TEST: ${{ secrets.CAPSTONE_TEST }}
         run: |
           dvc repro
