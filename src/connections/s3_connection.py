@@ -41,7 +41,7 @@ class s3_operations:
             logging.exception(f"❌ Failed to fetch '{file_key}' from S3: {e}")
             return None
 
-# Example usage
+## Example usage
 # if __name__ == "__main__":
     # Replace these with your actual AWS credentials and S3 details
     # BUCKET_NAME = "imdb-bucket-new-v2"
