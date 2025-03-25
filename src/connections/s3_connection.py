@@ -1,6 +1,9 @@
 import boto3
 import pandas as pd
 import logging
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 from src.logger import logging
 from io import StringIO
 
@@ -40,14 +43,14 @@ class s3_operations:
 
 # Example usage
 # if __name__ == "__main__":
-#     # Replace these with your actual AWS credentials and S3 details
-#     BUCKET_NAME = "bucket-name"
-#     AWS_ACCESS_KEY = "AWS_ACCESS_KEY"
-#     AWS_SECRET_KEY = "AWS_SECRET_KEY"
-#     FILE_KEY = "data.csv"  # Path inside S3 bucket
+    # Replace these with your actual AWS credentials and S3 details
+    # BUCKET_NAME = "imdb-bucket-new-v2"
+    # AWS_ACCESS_KEY = ""
+    # AWS_SECRET_KEY = "/smmZXA"
+    # FILE_KEY = "data.csv"  # Path inside S3 bucket
 
-#     data_ingestion = s3_operations(BUCKET_NAME, AWS_ACCESS_KEY, AWS_SECRET_KEY)
-#     df = data_ingestion.fetch_file_from_s3(FILE_KEY)
+    # data_ingestion = s3_operations(BUCKET_NAME, AWS_ACCESS_KEY, AWS_SECRET_KEY)
+    # df = data_ingestion.fetch_file_from_s3(FILE_KEY)
 
-#     if df is not None:
-#         print(f"Data fetched with {len(df)} records..")  # Display first few rows of the fetched DataFrame
+    # if df is not None:
+    #     print(f"Data fetched with {len(df)} records..")  # Display first few rows of the fetched DataFrame
